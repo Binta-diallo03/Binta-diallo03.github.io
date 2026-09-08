@@ -38,7 +38,6 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 68px;
 
@@ -171,7 +170,6 @@ img {
 
     object-fit: cover;
 
-    /* Image nette, sans filtre */
     filter: none;
     opacity: 1;
 }
@@ -595,20 +593,58 @@ img {
 }
 
 
-/* COULEURS ICÔNES COMPÉTENCES */
+/* =====================================================
+   COULEURS ICÔNES COMPÉTENCES
+===================================================== */
 
-.skill-card:nth-child(1) .skill-icon { color: #336791; }
-.skill-card:nth-child(2) .skill-icon { color: #3776ab; }
-.skill-card:nth-child(3) .skill-icon { color: #f2c811; }
-.skill-card:nth-child(4) .skill-icon { color: #217346; }
-.skill-card:nth-child(5) .skill-icon { color: #2e7d32; }
-.skill-card:nth-child(6) .skill-icon { color: #4f7cff; }
-.skill-card:nth-child(7) .skill-icon { color: #8b5cf6; }
-.skill-card:nth-child(8) .skill-icon { color: #6366f1; }
-.skill-card:nth-child(9) .skill-icon { color: #f05032; }
-.skill-card:nth-child(10) .skill-icon { color: #64748b; }
-.skill-card:nth-child(11) .skill-icon { color: #e76f51; }
-.skill-card:nth-child(12) .skill-icon { color: #ec4899; }
+.skill-card:nth-child(1) .skill-icon {
+    color: #336791;
+}
+
+.skill-card:nth-child(2) .skill-icon {
+    color: #3776ab;
+}
+
+.skill-card:nth-child(3) .skill-icon {
+    color: #f2c811;
+}
+
+.skill-card:nth-child(4) .skill-icon {
+    color: #217346;
+}
+
+.skill-card:nth-child(5) .skill-icon {
+    color: #2e7d32;
+}
+
+.skill-card:nth-child(6) .skill-icon {
+    color: #4f7cff;
+}
+
+.skill-card:nth-child(7) .skill-icon {
+    color: #8b5cf6;
+}
+
+.skill-card:nth-child(8) .skill-icon {
+    color: #6366f1;
+}
+
+.skill-card:nth-child(9) .skill-icon {
+    color: #f05032;
+}
+
+.skill-card:nth-child(10) .skill-icon {
+    color: #64748b;
+}
+
+.skill-card:nth-child(11) .skill-icon {
+    color: #e76f51;
+}
+
+.skill-card:nth-child(12) .skill-icon {
+    color: #ec4899;
+}
+
 
 /* =====================================================
    PROJETS
@@ -1207,11 +1243,6 @@ footer {
     .skills-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr));
     }
-
-    .skill-card:nth-child(5) {
-        grid-column: 1;
-    }
-
 }
 
 
