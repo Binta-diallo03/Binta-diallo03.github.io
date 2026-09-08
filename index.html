@@ -20,7 +20,28 @@
             color: #20242a;
             line-height: 1.6;
         }
+   .hero {
+    max-width: 1100px;
+    margin: auto;
+    min-height: 620px;
+    padding: 80px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
 
+.hero-content {
+    max-width: 600px;
+}
+
+.profile-photo {
+    width: 330px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
         header {
             background: #ffffff;
             border-bottom: 1px solid #e5e7eb;
@@ -317,48 +338,58 @@
 
 <main>
 
-    <section class="hero">
-        <div class="hero-content">
+   <section class="hero">
 
-            <span class="tag">Disponible en alternance · Septembre 2026</span>
+    <div class="hero-content">
 
-            <h1>Binta Diallo</h1>
+        <span class="tag">
+            Disponible en alternance · Septembre 2026
+        </span>
 
-            <h2>Data Analyst en alternance</h2>
+        <h1>Binta Diallo</h1>
 
-            <p>
-                Je transforme les données en informations utiles pour aider
-                à comprendre la performance, identifier les tendances et
-                faciliter la prise de décision.
-            </p>
+        <h2>Data Analyst en alternance</h2>
 
-            <p>
-                <strong>SQL · Python · Power BI · Excel</strong>
-                <br>
-                Paris · Île-de-France
-            </p>
+        <p>
+            Je transforme les données en informations utiles pour aider
+            à comprendre la performance, identifier les tendances et
+            faciliter la prise de décision.
+        </p>
 
-            <div class="buttons">
-                <a class="btn btn-primary"
-                   href="https://github.com/binta-diallo03"
-                   target="_blank">
-                    GitHub
-                </a>
+        <p>
+            <strong>SQL · Python · Power BI · Excel</strong>
+            <br>
+            Paris · Île-de-France
+        </p>
 
-                <a class="btn"
-                   href="https://www.linkedin.com/in/binta-diallo"
-                   target="_blank">
-                    LinkedIn
-                </a>
+        <div class="buttons">
+            <a class="btn btn-primary"
+               href="https://github.com/binta-diallo03"
+               target="_blank">
+                GitHub
+            </a>
 
-                <a class="btn" href="#contact">
-                    Me contacter
-                </a>
-            </div>
+            <a class="btn"
+               href="https://www.linkedin.com/in/binta-diallo"
+               target="_blank">
+                LinkedIn
+            </a>
 
+            <a class="btn" href="#contact">
+                Me contacter
+            </a>
         </div>
-    </section>
 
+    </div>
+
+    <div>
+        <img
+            src="photo.jpg"
+            alt="Photo de Binta Diallo"
+            class="profile-photo">
+    </div>
+
+</section>
 
     <section id="about" class="about">
         <div class="about-content">
