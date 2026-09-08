@@ -44,7 +44,7 @@ a {
 
     z-index: 1000;
 
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(14px);
 
     border-bottom: 1px solid #e5e7eb;
@@ -75,6 +75,7 @@ a {
 .navbar nav a {
     font-size: 14px;
     color: #555c68;
+
     transition: 0.3s ease;
 }
 
@@ -112,14 +113,21 @@ a {
     display: flex;
     align-items: center;
 
+    overflow: hidden;
+
     background-image: url("images/image.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 
     background-color: #e9ebef;
-
-    overflow: hidden;
 }
+
+/*
+   L'image de fond reste visible.
+   Le voile clair est surtout placé
+   sur la partie texte.
+*/
 
 .hero-overlay {
     position: absolute;
@@ -127,19 +135,23 @@ a {
 
     z-index: 1;
 
+    pointer-events: none;
+
     background:
         linear-gradient(
             90deg,
-            rgba(255, 255, 255, 0.90) 0%,
-            rgba(255, 255, 255, 0.78) 42%,
-            rgba(255, 255, 255, 0.42) 72%,
-            rgba(255, 255, 255, 0.18) 100%
+            rgba(255, 255, 255, 0.92) 0%,
+            rgba(255, 255, 255, 0.82) 30%,
+            rgba(255, 255, 255, 0.50) 52%,
+            rgba(255, 255, 255, 0.10) 78%,
+            rgba(255, 255, 255, 0.00) 100%
         );
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+
+    z-index: 3;
 
     width: 86%;
     max-width: 1250px;
@@ -160,11 +172,17 @@ a {
 
     flex-shrink: 0;
 
+    position: relative;
+
+    z-index: 4;
+
     border-radius: 18px;
 
     overflow: hidden;
 
     border: 1px solid rgba(0, 0, 0, 0.12);
+
+    background: #ffffff;
 
     box-shadow:
         0 25px 60px rgba(0, 0, 0, 0.18);
@@ -174,12 +192,27 @@ a {
     width: 100%;
     height: 100%;
 
+    display: block;
+
     object-fit: cover;
 
-    display: block;
+    /*
+       IMPORTANT :
+       aucune opacity,
+       aucun filtre,
+       aucune transparence.
+    */
+
+    opacity: 1;
+
+    filter: none;
 }
 
 .hero-text {
+    position: relative;
+
+    z-index: 4;
+
     max-width: 650px;
 }
 
@@ -223,8 +256,15 @@ a {
     margin-bottom: 35px;
 }
 
+
+/* ================================
+   HERO BUTTONS
+================================ */
+
 .hero-buttons {
     display: flex;
+
+    flex-wrap: wrap;
 
     gap: 14px;
 
@@ -233,6 +273,13 @@ a {
 
 .primary-button,
 .secondary-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
     padding: 14px 23px;
 
     border-radius: 8px;
@@ -256,17 +303,25 @@ a {
 .secondary-button {
     border: 1px solid #cdd1d8;
 
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.82);
 
     color: #171a21;
 }
 
 .secondary-button:hover {
     background: #ffffff;
+
+    transform: translateY(-3px);
 }
+
+
+/* ================================
+   SOCIALS
+================================ */
 
 .socials {
     display: flex;
+
     gap: 12px;
 }
 
@@ -275,6 +330,7 @@ a {
     height: 40px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -284,7 +340,7 @@ a {
 
     color: #555c68;
 
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.82);
 
     transition: 0.3s ease;
 }
@@ -297,16 +353,23 @@ a {
     transform: translateY(-3px);
 }
 
+
+/* ================================
+   SCROLL INDICATOR
+================================ */
+
 .scroll-indicator {
     position: absolute;
 
-    z-index: 2;
+    z-index: 3;
 
     bottom: 30px;
     right: 7%;
 
     display: flex;
+
     gap: 12px;
+
     align-items: center;
 
     color: #626976;
@@ -456,7 +519,8 @@ a {
 
     transition: 0.3s ease;
 
-    box-shadow: 0 5px 20px rgba(20, 25, 35, 0.04);
+    box-shadow:
+        0 5px 20px rgba(20, 25, 35, 0.04);
 }
 
 .skill-card:hover {
@@ -464,7 +528,8 @@ a {
 
     border-color: #c9ced6;
 
-    box-shadow: 0 12px 30px rgba(20, 25, 35, 0.08);
+    box-shadow:
+        0 12px 30px rgba(20, 25, 35, 0.08);
 }
 
 .skill-icon {
@@ -472,6 +537,7 @@ a {
     height: 45px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -532,7 +598,8 @@ a {
 
     transition: 0.3s ease;
 
-    box-shadow: 0 6px 25px rgba(20, 25, 35, 0.05);
+    box-shadow:
+        0 6px 25px rgba(20, 25, 35, 0.05);
 }
 
 .project-card:hover {
@@ -540,7 +607,8 @@ a {
 
     border-color: #c9ced6;
 
-    box-shadow: 0 15px 35px rgba(20, 25, 35, 0.10);
+    box-shadow:
+        0 15px 35px rgba(20, 25, 35, 0.10);
 }
 
 .project-image {
@@ -703,7 +771,8 @@ a {
 
     transition: 0.3s ease;
 
-    box-shadow: 0 5px 20px rgba(20, 25, 35, 0.04);
+    box-shadow:
+        0 5px 20px rgba(20, 25, 35, 0.04);
 }
 
 .process-card:hover {
@@ -711,7 +780,8 @@ a {
 
     border-color: #c9ced6;
 
-    box-shadow: 0 12px 30px rgba(20, 25, 35, 0.08);
+    box-shadow:
+        0 12px 30px rgba(20, 25, 35, 0.08);
 }
 
 .process-number {
@@ -878,95 +948,6 @@ a {
     font-weight: 500;
 
     color: #444b57;
-}
-
-
-/* ================================
-   CV
-================================ */
-
-.cv-section {
-    background: #f5f6f8;
-}
-
-.cv-box {
-    max-width: 1000px;
-
-    margin: auto;
-
-    padding: 35px 40px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 30px;
-
-    background: #ffffff;
-
-    border: 1px solid #e0e3e8;
-
-    border-radius: 14px;
-
-    box-shadow: 0 5px 20px rgba(20, 25, 35, 0.04);
-}
-
-.cv-preview {
-    display: flex;
-
-    align-items: center;
-
-    gap: 20px;
-}
-
-.cv-icon {
-    width: 55px;
-    height: 55px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 10px;
-
-    background: #eef0f3;
-
-    color: #303641;
-
-    font-size: 20px;
-}
-
-.cv-preview h3 {
-    font-size: 17px;
-
-    margin-bottom: 4px;
-
-    color: #171a21;
-}
-
-.cv-preview p {
-    color: #7f8692;
-
-    font-size: 13px;
-}
-
-.cv-actions {
-    display: flex;
-
-    gap: 12px;
-
-    flex-wrap: wrap;
-}
-
-.cv-actions a {
-    display: flex;
-
-    align-items: center;
-
-    gap: 9px;
 }
 
 
@@ -1168,12 +1149,6 @@ footer {
 
         gap: 45px;
     }
-
-    .cv-box {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
 }
 
 
@@ -1199,16 +1174,22 @@ footer {
         width: 90%;
     }
 
+    /*
+       Sur mobile on garde l'image
+       visible derrière le Hero.
+    */
+
     .hero {
-        background-position: 60% center;
+        background-position: 65% center;
     }
 
     .hero-overlay {
         background:
             linear-gradient(
                 90deg,
-                rgba(255, 255, 255, 0.88) 0%,
-                rgba(255, 255, 255, 0.55) 100%
+                rgba(255, 255, 255, 0.90) 0%,
+                rgba(255, 255, 255, 0.62) 48%,
+                rgba(255, 255, 255, 0.12) 100%
             );
     }
 
@@ -1254,22 +1235,6 @@ footer {
 
     .looking-text h2 {
         font-size: 42px;
-    }
-
-    .cv-box {
-        padding: 30px 25px;
-    }
-
-    .cv-actions {
-        width: 100%;
-
-        flex-direction: column;
-    }
-
-    .cv-actions a {
-        justify-content: center;
-
-        width: 100%;
     }
 
     footer {
