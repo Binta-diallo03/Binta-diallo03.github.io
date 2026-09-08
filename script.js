@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-```
+
 const elements = document.querySelectorAll(
     ".hero-text, .hero-photo, .section-title, .skill-card, .project-card"
 );
@@ -19,7 +19,7 @@ elements.forEach((element, index) => {
     }, index * 80);
 
 });
-```
+
 
 });
 
