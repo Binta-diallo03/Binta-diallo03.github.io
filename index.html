@@ -1,1 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Binta Diallo | Data Analyst</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f7f8fa;
+            color: #20242a;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1f2937;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #4b5563;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #111827;
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: auto;
+            min-height: 620px;
+            padding: 110px 25px 80px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e9eef5;
+            color: #374151;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 18px;
+            color: #111827;
+        }
+
+        .hero h2 {
+            font-size: 27px;
+            font-weight: 500;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 680px;
+            color: #6b7280;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid #d1d5db;
+            color: #1f2937;
+            background: white;
+        }
+
+        .btn-primary {
+            background: #1f2937;
+            color: white;
+            border-color: #1f2937;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 90px 25px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 12px;
+            color: #111827;
+        }
+
+        .section-intro {
+            color: #6b7280;
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .about {
+            background: white;
+            max-width: none;
+        }
+
+        .about-content {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .about p {
+            max-width: 800px;
+            color: #4b5563;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .card h3 {
+            margin-bottom: 18px;
+            font-size: 18px;
+            color: #1f2937;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 28px;
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .status {
+            font-size: 12px;
+            color: #6b7280;
+            background: #f1f3f5;
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+
+        .experience-item {
+            background: white;
+            border-left: 3px solid #374151;
+            padding: 25px;
+            margin-bottom: 18px;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .experience-item h3 {
+            margin-bottom: 4px;
+        }
+
+        .date {
+            color: #6b7280;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .experience-item ul {
+            padding-left: 20px;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .contact {
+            background: #1f2937;
+            color: white;
+            max-width: none;
+        }
+
+        .contact-content {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            color: #d1d5db;
+            margin-bottom: 25px;
+        }
+
+        .contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+            nav ul {
+                display: none;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+                padding-top: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Binta Diallo</div>
+
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#skills">Compétences</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#experience">Expérience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="hero-content">
+
+            <span class="tag">Disponible en alternance · Septembre 2026</span>
+
+            <h1>Binta Diallo</h1>
+
+            <h2>Data Analyst en alternance</h2>
+
+            <p>
+                Je transforme les données en informations utiles pour aider
+                à comprendre la performance, identifier les tendances et
+                faciliter la prise de décision.
+            </p>
+
+            <p>
+                <strong>SQL · Python · Power BI · Excel</strong>
+                <br>
+                Paris · Île-de-France
+            </p>
+
+            <div class="buttons">
+                <a class="btn btn-primary"
+                   href="https://github.com/binta-diallo03"
+                   target="_blank">
+                    GitHub
+                </a>
+
+                <a class="btn"
+                   href="https://www.linkedin.com/in/binta-diallo"
+                   target="_blank">
+                    LinkedIn
+                </a>
+
+                <a class="btn" href="#contact">
+                    Me contacter
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="about" class="about">
+        <div class="about-content">
+
+            <h2 class="section-title">À propos</h2>
+
+            <p class="section-intro">
+                Mon parcours combine informatique, analyse de données et
+                expérience opérationnelle.
+            </p>
+
+            <p>
+                Diplômée en Informatique Appliquée à la Gestion des Entreprises
+                et en développement Web & Mobile, je poursuis mon parcours
+                avec un Mastère Data Engineering & Intelligence Artificielle
+                à EFREI Paris à partir de septembre 2026.
+            </p>
+
+            <br>
+
+            <p>
+                Mes expériences m'ont permis de développer une approche
+                orientée données : collecte, contrôle qualité, analyse,
+                suivi d'indicateurs et création de tableaux de bord.
+                Je recherche aujourd'hui une alternance en Data Analyst
+                afin de mettre ces compétences au service d'une équipe Data
+                et de problématiques métier concrètes.
+            </p>
+
+        </div>
+    </section>
+
+
+    <section id="skills">
+
+        <h2 class="section-title">Compétences</h2>
+
+        <p class="section-intro">
+            Les principaux outils et savoir-faire que j'utilise pour analyser,
+            contrôler et valoriser les données.
+        </p>
+
+        <div class="skills-grid">
+
+            <div class="card">
+                <h3>Outils & Langages</h3>
+
+                <ul>
+                    <li>SQL / MySQL</li>
+                    <li>Python</li>
+                    <li>Power BI</li>
+                    <li>Power Query</li>
+                    <li>Excel avancé</li>
+                    <li>Git / GitHub</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Data Skills</h3>
+
+                <ul>
+                    <li>Analyse de données</li>
+                    <li>Data Quality</li>
+                    <li>Contrôle de cohérence</li>
+                    <li>Détection d'anomalies</li>
+                    <li>Reporting & KPI</li>
+                    <li>Data visualisation</li>
+                    <li>DAX</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Soft Skills</h3>
+
+                <ul>
+                    <li>Esprit analytique</li>
+                    <li>Rigueur</li>
+                    <li>Curiosité</li>
+                    <li>Autonomie</li>
+                    <li>Organisation</li>
+                    <li>Travail en équipe</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="projects">
+
+        <h2 class="section-title">Projets Data</h2>
+
+        <p class="section-intro">
+            Une sélection de projets personnels autour de l'analyse,
+            de la visualisation et de la qualité des données.
+        </p>
+
+        <div class="projects-grid">
+
+            <div class="project">
+                <h3>Dashboard commercial — Power BI</h3>
+
+                <p>
+                    Analyse de la performance commerciale, chiffre d'affaires,
+                    marge, produits, retours et segmentation client RFM.
+                </p>
+
+                <span class="status">Projet bientôt disponible</span>
+            </div>
+
+
+            <div class="project">
+                <h3>Analyse de données — SQL</h3>
+
+                <p>
+                    Exploration d'une base relationnelle à travers des
+                    requêtes SQL, jointures, agrégations et indicateurs
+                    business.
+                </p>
+
+                <span class="status">Projet bientôt disponible</span>
+            </div>
+
+
+            <div class="project">
+                <h3>Analyse de données — Python</h3>
+
+                <p>
+                    Manipulation, nettoyage et analyse exploratoire de données
+                    avec Python.
+                </p>
+
+                <span class="status">Projet bientôt disponible</span>
+            </div>
+
+
+            <div class="project">
+                <h3>Data Quality</h3>
+
+                <p>
+                    Contrôle de cohérence, identification d'anomalies et
+                    fiabilisation des données.
+                </p>
+
+                <span class="status">Projet bientôt disponible</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="experience">
+
+        <h2 class="section-title">Expérience</h2>
+
+        <p class="section-intro">
+            Des expériences à la croisée des données, du support opérationnel
+            et de la relation client.
+        </p>
+
+
+        <div class="experience-item">
+
+            <h3>Data Analyst — Nendi Advisory</h3>
+
+            <div class="date">Paris · Février 2026 – Juin 2026</div>
+
+            <ul>
+                <li>Collecte, extraction et structuration de données clients.</li>
+                <li>Contrôle et fiabilisation des bases de suivi.</li>
+                <li>Analyse et reporting avec Excel et Power BI.</li>
+                <li>Création de tableaux de bord et suivi d'indicateurs.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="experience-item">
+
+            <h3>Assistante technique / Support client — Foundever</h3>
+
+            <div class="date">Dakar · Avril 2024 – Janvier 2026</div>
+
+            <ul>
+                <li>Suivi quotidien des demandes et des performances.</li>
+                <li>Analyse des incidents récurrents et de leurs causes.</li>
+                <li>Suivi des KPI d'activité.</li>
+                <li>Utilisation d'un CRM pour le suivi et la fiabilité des données clients.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="experience-item">
+
+            <h3>Assistante Data — Contrôle & Qualité</h3>
+
+            <div class="date">Projet électoral · Octobre 2023 – Décembre 2023</div>
+
+            <ul>
+                <li>Saisie et vérification d'un volume important de données.</li>
+                <li>Contrôles de cohérence et fiabilisation.</li>
+                <li>Respect des procédures de qualité et de confidentialité.</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <section id="contact" class="contact">
+
+        <div class="contact-content">
+
+            <h2 class="section-title">Contact</h2>
+
+            <p>
+                Vous recherchez une alternante Data Analyst à partir de
+                septembre 2026 ? N'hésitez pas à me contacter.
+            </p>
+
+            <p>
+                📧
+                <a href="mailto:Bintadiala03@gmail.com">
+                    Bintadiala03@gmail.com
+                </a>
+            </p>
+
+            <p>
+                📞 07 68 77 83 87
+            </p>
+
+            <p>
+                📍 Paris, Île-de-France
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    © 2026 Binta Diallo · Data Analyst
+</footer>
+
+</body>
+</html>
